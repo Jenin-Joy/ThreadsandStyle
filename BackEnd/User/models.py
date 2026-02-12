@@ -10,7 +10,7 @@ class tbl_booking(models.Model):
     booking_status = models.IntegerField(default=0)
     user = models.ForeignKey(tbl_user, on_delete=models.CASCADE)
     seller = models.ForeignKey(tbl_seller, on_delete=models.CASCADE)
-    deliveryboy = models.ForeignKey(tbl_deliveryboy, on_delete=models.CASCADE)
+    deliveryboy = models.ForeignKey(tbl_deliveryboy, on_delete=models.CASCADE, null=True)
 
 class tbl_cart(models.Model):
     cart_quantity = models.IntegerField(default=1)
